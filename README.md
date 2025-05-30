@@ -48,19 +48,24 @@ scp /var/lib/snapd/snapshots/1_diode-node*.zip root@IpAdresiniz:/var/lib/snapd/s
 
 <b>İkinci seçenek:</b> FTP/SFTP Termius, WinSCP vb. uygulamaları ile yeni sunucuya bağlanın. Pc'nizde bulunan yedek dosyasını ```/var/lib/snapd/snapshots/``` dosya yoluna giderek ```snapshots``` klasörünün içerisine kopyalayabilirsiniz.
 
-3- Yedek dosyası yeni sunucuya taşıdıktan sonra Diode düğümünü kurun.
+
+3- Snap paket yöneticisi kurulu değilse kurun.
+```ABAP
+sudo apt install snapd -y
+```
+4- Yedek dosyası yeni sunucuya taşıdıktan sonra Diode düğümünü kurun.
 
 ```AL
 sudo snap install diode-node
 ```
 
-4- Yedek dosyasını yüklemeden önce düğümü durdurun.
+5- Yedek dosyasını yüklemeden önce düğümü durdurun.
 
 ```ABAP
 sudo snap stop diode-node
 ```
 
-5- Yedek dosyasını yükleyin. Yedek dosyasının önüne ekleyeceğiz rakam yedek dosyası alırken ```Set``` kısmının alınta yazan rakamdır. Yani sizin aldığınız yedek dosyasının en başında yazan rakama göre aşağıda ki komutu kendizine göre düzenlemeniz gerekiyor.
+6- Yedek dosyasını yükleyin. Yedek dosyasının önüne ekleyeceğiz rakam yedek dosyası alırken ```Set``` kısmının alınta yazan rakamdır. Yani sizin aldığınız yedek dosyasının en başında yazan rakama göre aşağıda ki komutu kendizine göre düzenlemeniz gerekiyor.
 
 ```Mask
 sudo snap restore 1 diode-node
@@ -69,7 +74,7 @@ sudo snap restore 1 diode-node
 ![image](https://github.com/user-attachments/assets/e283eaaf-9cd9-4eab-983d-deaa29c18a49)
 
 
-6- Düğümünüzü yeniden başlatın
+7- Düğümünüzü yeniden başlatın
 
 ```Mask
 sudo snap start diode-node
