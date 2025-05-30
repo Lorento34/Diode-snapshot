@@ -1,7 +1,10 @@
 # Diode-snapshot
 
 
-1- Geçici verileri temizleyip düğümün yedek dosyasını alın. Yedek dosyasını aldıktan sonra çıktıda ```1_diode-node_v1.6.5_278``` gibi dosyanın adı yazar. Burada önemli olan kısım yedek dosyasının en başında ki rakamdır. Bu kurulum için önemlidir çünkü orada ki rakama göre kurulum yapılıyor.  
+1- Geçici verileri temizleyip düğümün yedek dosyasını alın. Yedek dosyasını aldıktan sonra çıktıda ```1 diode-node  5.31s  v1.6.5   278  33.9MB``` gibi bilgiler çıkacak. Burada önemli olan kısım  ```Set``` seçeneğini altında yer alan, yedek dosyasının en başında ki rakamdır. Bu kurulum için önemlidir çünkü orada ki rakama göre kurulum yapılıyor.  
+
+![image](https://github.com/user-attachments/assets/d11f073f-341a-4cb4-958e-91af1f94cd22)
+
 
 ```Mask
 diode-node.flush && sudo snap stop diode-node && sudo snap save diode-node
