@@ -32,8 +32,9 @@ scp /var/lib/snapd/snapshots/1_diode-node*.zip root@IpAdresiniz:/var/lib/snapd/s
 
 4- Düğümü kullanmaya devam etmek istiyorsanız o zaman düğümü yeniden başlatın. Eğer düğümünü kullanmayacaksanız ya da farklı bir sunucuya taşayacaksanız o zaman bu adımı geçebilirsiniz.
 
+```Mask
 sudo snap start diode-node
- 
+```
 
 
 
