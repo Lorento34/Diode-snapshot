@@ -13,7 +13,7 @@ diode-node.flush && sudo snap stop diode-node && sudo snap save diode-node
 ![image](https://github.com/user-attachments/assets/d11f073f-341a-4cb4-958e-91af1f94cd22)
 
 
-2- Düğümü kullanmaya devam etmek istiyorsanız o zaman düğümü yeniden başlatın. Eğer düğümünü kullanmayacaksanız ya da farklı bir sunucuya taşayacaksanız o zaman bu adımı geçebilirsiniz.
+2- Düğümü kullanmaya devam etmek istiyorsanız o zaman düğümü yeniden başlatın. Eğer kullanmayacaksanız ya da düğümü farklı bir sunucuya taşayacaksanız o zaman bu adımı geçebilirsiniz.
 
 ```Mask
 sudo snap start diode-node
