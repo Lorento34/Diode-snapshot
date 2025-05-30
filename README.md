@@ -21,9 +21,9 @@ sudo snap start diode-node
 
 ## Geri Yükleme İşlemi
 
-Düğümünüzün yedeğini alıp, yeni bir sunucuya düğümü hemen kuracaksanız o zaman aşağıda ki adımları takip edebilirsiniz.
+Düğümünüzün yedeğini alıp, yeni bir sunucuya hemen kuracaksanız o zaman aşağıda ki adımları takip edebilirsiniz.
 
-1- Taşıma yapacağınız yeni sunucuda ki ```Snapshots``` klasörünü kontrol edin. Eğer ```/var/lib/snapd/snapshots/``` dizini mevcut değilse aşağıda ki komutu ile oluşturun. Ya da FTP/SFTP Termius, WinSCP vb. uygulamaları ile yeni sunucuya bağlanıp ```Snapshots``` klasörünü manuel olarak oluşturabilirsiniz.
+1- Taşıma yapacağınız yeni sunucuda ki ```Snapshots``` klasörünü kontrol edin. Eğer ```/var/lib/snapd/snapshots/``` dizini mevcut değilse aşağıda ki komutu ile oluşturun. Ya da FTP/SFTP Termius, WinSCP vb. uygulamaları ile yeni sunucuya bağlanıp ```/var/lib/snapd/``` dosya yoluna giderek ```Snapshots``` klasörünü manuel olarak oluşturabilirsiniz.
 
 ```Processing
 sudo mkdir -p /var/lib/snapd/snapshots
@@ -36,17 +36,18 @@ scp /var/lib/snapd/snapshots/1_diode-node*.zip root@IpAdresiniz:/var/lib/snapd/s
 ```
 
 > [!CAUTION]
+> - ```1_diode-node``` yedek dosyasının başında ki rakam yedek alırken ```Set``` kısmının alınta yazan rakamdır.
 > - Yukarıda ki komutta ```root@IpAdresiniz``` kısmına kendi ip adresinizi yazın.
 > - Sunucuya ilk kez bağlanıyorsanız ```Are you sure you want to continue connecting (yes/no)?``` diye soracaktır; ```yes``` yazıp Enter’a basın.
 > - Yedek dosyasının aktarılacağı sunucusunun root şifresi isteyecek; doğru şifreyi girdikten sonra aktarım başlar.
 
-3- Yedek dosyası yen sunucuya taşıdıktan sonra Diode düğümünü kurun yeni sunucuya.
+3- Yedek dosyası yeni sunucuya taşıdıktan sonra Diode düğümünü kurun.
 
 ```AL
 sudo snap install diode-node
 ```
 
-4- Yedek dosyasını yüklemede önce düğümü durdurun.
+4- Yedek dosyasını yüklemeden önce düğümü durdurun.
 
 ```ABAP
 sudo snap stop diode-node
