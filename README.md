@@ -2,6 +2,7 @@
 
 Bu rehber, Diode düğümünüzün (Node) kritik verilerini korumak ve beklenmedik arızalar, sunucu taşımaları veya format işlemleri sonrasında hızlı bir şekilde geri dönebilmeniz için yedek (snapshot) alma ve geri yükleme adımlarını detaylı bir şekilde anlatmaya yardımcı olmak için hazırlandı. Düzenli yedek alarak; veri kaybı riskini en aza indirebilir, bakım ve yükseltme süreçlerini kesintisiz tamamlayabilir ve oluşabilecek aksaklıklardan etkilenmeden düğümünüzü çalışır tutabilirsiniz.
 
+------
 
 1- Geçici verileri temizleyip düğümün yedek dosyasını alın. Yedek dosyasını aldıktan sonra çıktıda ```1 diode-node  5.31s  v1.6.5   278  33.9MB``` gibi bilgiler çıkacak. Burada önemli olan kısım  ```Set``` seçeneğini altında yer alan, yedek dosyasının en başında ki rakamdır. Bu kurulum için önemlidir çünkü orada ki rakama göre kurulum yapılıyor.  
 
