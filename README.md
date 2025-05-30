@@ -7,17 +7,26 @@
 diode-node.flush && sudo snap stop diode-node && sudo snap save diode-node
 ```
 
-2- Düğümünüzün sadece yedeğini alıyorsanız ```/var/lib/snapd/snapshots/``` dosya yoluna gidin. Snapshots klasörüne gidip, yedek dosyasını Pc'nize yedekleyin.
+2- Düğümü kullanmaya devam etmek istiyorsanız o zaman düğümü yeniden başlatın. Eğer düğümünü kullanmayacaksanız ya da farklı bir sunucuya taşayacaksanız o zaman bu adımı geçebilirsiniz.
 
-3- Düğümünüzün yedeğini alıp yeni bir sunucuya hemen düğüm kuracaksanız o zaman aşağıda ki adımları takip edebilirsiniz.
+```Mask
+sudo snap start diode-node
+```
 
-> [!CAUTION]
-> - Taşımaa yapacağınız yeni sunucuda ki ```Snapshots``` klasörünü kontrol edin eğer ```/var/lib/snapd/snapshots/``` dizini mevcut değilse aşağıda kikomutu ile oluşturun. Ya da FTP/SFTP Termius, WinSCP vb. uygulamaları ile yeni sunucuya bağlanıp ```Snapshots``` klasörünü manuel olarak oluşturabilirsiniz.
+3- Düğümünüzün sadece yedeğini alıyorsanız ```/var/lib/snapd/snapshots/``` dosya yoluna gidin. Snapshots klasörüne gidip, yedek dosyasını Pc'nize yedekleyin.
+
+
+## Geri Yükleme İşlemi
+
+Düğümünüzün yedeğini alıp yeni bir sunucuya hemen düğümü kuracaksanız o zaman aşağıda ki adımları takip edebilirsiniz.
+
+1- Taşıma yapacağınız yeni sunucuda ki ```Snapshots``` klasörünü kontrol edin. Eğer ```/var/lib/snapd/snapshots/``` dizini mevcut değilse aşağıda ki komutu ile oluşturun. Ya da FTP/SFTP Termius, WinSCP vb. uygulamaları ile yeni sunucuya bağlanıp ```Snapshots``` klasörünü manuel olarak oluşturabilirsiniz.
 
 ```Processing
 sudo mkdir -p /var/lib/snapd/snapshots
-``` 
-> - Yeni sunucuda ki ```/var/lib/snapd/snapshots/``` dosya yolunu oluşturduktan sonra yedek dosyasını yeni sunucuya aktarabilirsiniz.
+```
+
+2- Yeni sunucuda ki ```/var/lib/snapd/snapshots/``` dosya yolunu oluşturduktan sonra yedek dosyasını aşağıda ki komut ile yeni sunucuya aktarabilirsiniz.
 
 ```AMPL
 scp /var/lib/snapd/snapshots/1_diode-node*.zip root@IpAdresiniz:/var/lib/snapd/snapshots/
@@ -30,11 +39,7 @@ scp /var/lib/snapd/snapshots/1_diode-node*.zip root@IpAdresiniz:/var/lib/snapd/s
 > 
 > Yedek dosyasının aktarılacağı sunucusunun root şifresi isteyecek; doğru şifreyi girdikten sonra aktarım başlar.
 
-4- Düğümü kullanmaya devam etmek istiyorsanız o zaman düğümü yeniden başlatın. Eğer düğümünü kullanmayacaksanız ya da farklı bir sunucuya taşayacaksanız o zaman bu adımı geçebilirsiniz.
 
-```Mask
-sudo snap start diode-node
-```
 
 
 
