@@ -23,6 +23,7 @@ sudo mkdir -p /var/lib/snapd/snapshots
 scp /var/lib/snapd/snapshots/1_diode-node*.zip root@IpAdresiniz:/var/lib/snapd/snapshots/
 ```
 > [!CAUTION]
+> 
 > Yukarıda ki komutta ki ```root@IpAdresiniz``` kısmına kendi ip adresinizi yazın.
 > Sunucuya ilk kez bağlanıyorsanız ```Are you sure you want to continue connecting (yes/no)?``` diye soracaktır; ```yes``` yazıp Enter’a basın.
 > Yedek dosyasının aktarılacağı sunucusunun root şifresi isteyecek; doğru şifreyi girdikten sonra aktarım başlar.
