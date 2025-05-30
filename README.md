@@ -46,7 +46,7 @@ scp /var/lib/snapd/snapshots/1_diode-node*.zip root@IpAdresiniz:/var/lib/snapd/s
 > - Sunucuya ilk kez bağlanıyorsanız ```Are you sure you want to continue connecting (yes/no)?``` diye soracaktır; ```yes``` yazıp Enter’a basın.
 > - Yedek dosyasının aktarılacağı sunucusunun root şifresi isteyecek; doğru şifreyi girdikten sonra aktarım başlar.
 
-<b>İkinci seçenek:</b> FTP/SFTP Termius, WinSCP vb. uygulamaları ile yeni sunucuya bağlanıp, yedek dosyasını ```/var/lib/snapd/snapshots/``` dosya yoluna kopyalayabilirsiniz.
+<b>İkinci seçenek:</b> FTP/SFTP Termius, WinSCP vb. uygulamaları ile yeni sunucuya bağlanın. Pc'nizde bulunan yedek dosyasını ```/var/lib/snapd/snapshots/``` dosya yoluna giderek ```snapshots``` klasörünün içerisine kopyalayabilirsiniz.
 
 3- Yedek dosyası yeni sunucuya taşıdıktan sonra Diode düğümünü kurun.
 
