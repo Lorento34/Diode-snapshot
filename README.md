@@ -29,17 +29,21 @@ Düğümünüzün yedeğini alıp, yeni bir sunucuya hemen kuracaksanız o zaman
 sudo mkdir -p /var/lib/snapd/snapshots
 ```
 
-2- Yeni sunucuda ki ```/var/lib/snapd/snapshots/``` dosya yolunu oluşturduktan sonra yedek dosyasını aşağıda ki komut ile yeni sunucuya aktarabilirsiniz.
+2- Yedek dosyasını yeni sunucuya taşımak için 2 seçenek var. Sizin için hangisi kolaysa onu kullanabilirsiniz:
+
+<b>Birinci seçenek:</b> Yeni sunucuda ki ```/var/lib/snapd/snapshots/``` dosya yolunu oluşturduktan sonra yedek dosyasını aşağıda ki komut ile yeni sunucuya aktarabilirsiniz.
 
 ```AMPL
 scp /var/lib/snapd/snapshots/1_diode-node*.zip root@IpAdresiniz:/var/lib/snapd/snapshots/
 ```
 
 > [!CAUTION]
-> - ```1_diode-node``` yedek dosyasının başında ki rakam yedek alırken ```Set``` kısmının alınta yazan rakamdır.
+> - ```1_diode-node``` yedek dosyasının başında ki rakam yedek alırken ```Set``` kısmının alınta yazan rakamdır sizde farklılık gösterebilir.
 > - Yukarıda ki komutta ```root@IpAdresiniz``` kısmına kendi ip adresinizi yazın.
 > - Sunucuya ilk kez bağlanıyorsanız ```Are you sure you want to continue connecting (yes/no)?``` diye soracaktır; ```yes``` yazıp Enter’a basın.
 > - Yedek dosyasının aktarılacağı sunucusunun root şifresi isteyecek; doğru şifreyi girdikten sonra aktarım başlar.
+
+<b>İkinci seçenek:</b> FTP/SFTP Termius, WinSCP vb. uygulamaları ile yeni sunucuya bağlanıp, yedek dosyasını ```/var/lib/snapd/snapshots/``` dosya yoluna kopyalayabilirsiniz.
 
 3- Yedek dosyası yeni sunucuya taşıdıktan sonra Diode düğümünü kurun.
 
