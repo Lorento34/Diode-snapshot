@@ -34,7 +34,7 @@ sudo mkdir -p /var/lib/snapd/snapshots
 
 2- Yedek dosyasını yeni sunucuya taşımak için 2 seçenek var. Sizin için hangisi kolaysa onu kullanabilirsiniz:
 
-<b>Birinci seçenek:</b> Yeni sunucuda ki ```/var/lib/snapd/snapshots/``` dosya yolunu oluşturduktan sonra yedek dosyasını aşağıda ki komut ile yeni sunucuya aktarabilirsiniz.
+<b>Birinci seçenek:</b> Yeni sunucuda ki ```/var/lib/snapd/snapshots/``` dosya yolunu oluşturduktan sonra düğümün kurulu olduğu, yani yedeği aldığınız düğümün terminalinde aşağıda ki komutu çalıştırarak yedeği yeni sunucuya aktarabilirsiniz.
 
 ```AMPL
 scp /var/lib/snapd/snapshots/1_diode-node*.zip root@IpAdresiniz:/var/lib/snapd/snapshots/
